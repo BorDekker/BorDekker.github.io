@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1F211E;
+    color: fff;
+    align-items: center;
+    justify-content: center;
+}
+
+#Header{
+    width: 100%;
+    height: 60px;
+    background-color: #BF8B4B;
+}
+
+.Container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Logo a:visited{
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #F2F2F0;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #594B39;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/*-----Contact Information-----*/
+
+.Contact-Information{
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.Card{
+    border-radius: 60px;
+    background: #BF9B6F;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FC0D36;
+    cursor: pointer;
+}
+
+.Card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transform: 0.3s linear;
+    color: #F2F2F0;
+}
+
+.Card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+
+.Card-Icon{
+    font-size: 28px;
+    background: #1F211E;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #BF8B4B;
+}
+
+.Card:hover .Card-Icon{
+    background: none;
+    color: #BF8B4B;
+    transform: scale(1.6);
+}
+
+@media screen and (max-width:800px){
+    .Contact-Information{
+        flex-direction: column;
+    }
+
+    .Card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: #F2F2F0;
+    background: #BF8B4B;
+    font-weight: 300;
+    margin-top: auto;
+}
+
+footer p{
+    color: #F2F2F0;
+}
+
+.CopyRight{
+    color: #F2F2F0;
+    font-size: 14px;
+}

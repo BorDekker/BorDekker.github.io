@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dome Defenders</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/projectSetUpStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>Dome Defenders</h1>
+            <figure>
+                <img src="ImagesPRJ/DomeDefendersPRJ.png">
+                <figcaption>
+                    Space Project Dome Defenders
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this game about?
+            </h2>
+            <p>
+                Dome Defenders is a game that we developed in the 4th period of my first year for a project called Project Space. 
+                For this project we were going to make a game based around the theme space, this was a project that lasted over a period of 8 weeks.
+                Our idea of the game was that you crashed on a moon when you got struck by a meteorite, you were being followed by aliens for your intel on them.
+                <br><br>
+                On the moon you crashed, you've build a base to protect yourself and the resources you're gathering from the moon.
+                But while your gathering resources, you're being attacked by aliens and meteor showers. 
+                You have to get inside your base and use your gun to desstroy the aliens and meteorites to defend your base.
+                <br><br>
+                This was made with Unity, C# and Github. We worked on this game with 5 people, 3 artists and 2 programmers.
+            </p>
+
+            <h2>
+                My role
+            </h2>
+            <p>
+                My role was making and programming the menu, inventory, pausing the game & implementing art into the game.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-ProjectSpace/Dome Defenders - MainMenu.gif">
+                </div>
+                <div class="text-col">
+                    <h3>
+                        Menu mechanics & pausing game
+                    </h3>
+                </div>
+            </div>
+            <p>
+                Creating the menu was fun and challenging since it was the first time I created a menu for a game.
+                <br>
+                I used my own knowledge and the internet to create the menu, creating the inventory and pause 
+                <br>
+                menu was challenging at first. But since they're both similar in code, it was useful to use the same 
+                <br>
+                code for different mechanics.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-ProjectSpace/mainMenuCode.png">
+                </div>
+                <div class="text-col">
+                    <p>
+                        In Unity there is something called SceneManager,
+                        <br> 
+                        in this you can place all your levels of your game.
+                        <br>
+                        The menu is 0 in the SceneManager, the game is 1.
+                        <br>
+                        When you press play in the menu, in the SceneManager
+                        <br> 
+                        it will get a + 1. In doing so it transitions you to the game 
+                        <br>
+                        from the menu.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-ProjectSpace/pauseMenuCode.png">
+                </div>
+                <div class="text-col">
+                    <p>
+                        When you press the key button "escape",
+                        <br>
+                        the time in the game will become 0. 
+                        <br>
+                        The menu will slowly reveal itself,
+                        <br>
+                        you can press the menu button to go back to the menu.
+                        <br>
+                        When you press resume, time will become 1.
+                        <br>
+                        Now the game will resume from the moment it paused.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github <i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">Twitter <i class="fab fa-twitter-square"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            CopyRight by Bor Dekker
+        </p>
+    </footer>
+
+</body>
+</html>

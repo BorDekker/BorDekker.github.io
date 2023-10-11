@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bor Dekker Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="index.html" class="Logo">Portfolio <span>by Bor Dekker</span></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#AboutMe">About Me</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Unreal Engine 5 Developer</p>
+                <h1>Hi, I'm <span>Bor</span> Dekker<br> From The Netherlands</h1>
+            </div>
+        </div>
+    </div>
+<!-----About Me----->
+    <div id="AboutMe">
+        <div class="Container">
+            <div class="Row">
+                <div class="About-Col-1">
+                    <img src="ImagesPRJ/BorDekker.png" alt="Photo Of Bor Dekker">
+                    <img src="ImagesPRJ/GameIndustryHeroes.png" alt="Photos of Bor Dekker's game industry heroes including, Cory Barlog, Eric Williams, Hidetaka Miyazaki, Maja Moldenhauer and Hideo Kojima">
+                    <img src="ImagesPRJ/Rover.JPG" alt="Photo of Bor Dekker's dog called Rover">
+                </div>
+                <div class="About-Col-2">
+                    <h2 class="Sub-Title">About <span>Me</span></h2>
+                    <p>I'm Bor Dekker, an 19-year-old Unreal Engine 5 game developer from the Netherlands.
+                        <br>
+                        I specialize in Unreal Engine 5, Blueprints and C++. I would like to have some experience in working with MetaHuman.
+                        <br><br>
+                        Games like, Bloodborne, God Of War, Elden Ring, Castlevania, Cuphead have inspired me to create video games.
+                        <br><br>
+                        My heroes in the game industry include game directors Cory Barlog, Hidetaka Miyazaki, Maja Moldenhauer and the game company Konami.
+                        <br><br>
+                        In my free time, I enjoy playing video games, reading books / manga, watching movies / anime, watching devlogs on YouTube and programming.
+                        My top 5 favorite video games are Bloodborne, Elden Ring, God of War, Cuphead and Castlevania Symphony of the Night.
+                    </p>
+                    <a href="Blog.html" class="SeeMoreBlog">See more</a>
+
+                        <div class="Tab-Titles">
+                            <p class="Tab-Links Active-Link" onclick="OpenTab('Skills')">Skills</p>
+                            <p class="Tab-Links" onclick="OpenTab('Education')">Education</p>
+                            <p class="Tab-Links" onclick="OpenTab('Experience')">Experience</p>
+                        </div>
+
+                        <div class="Tab-Contents Active-Tab" id="Skills">
+                            <ul>
+                                <li><span>Blueprint / C++ / C#</span><br>Programming in these languages</li>
+                                <li><span>Unreal Engine 5</span><br>Creating / developing games in Unreal Engine 5</li>
+                                <li><span>Unity</span><br>Creating / developing games in Unity</li>
+                                <li><span>MetaHuman</span><br>I would like to work with it in Unreal and gain experience with it.</li>
+                                <li><span>Perforce</span><br>Putting my UE5 projects on it</li>
+                                <li><span>Github</span><br>Putting my Unity projects on it</li>
+                            </ul>
+                        </div>
+                        <div class="Tab-Contents" id="Education">
+                            <ul>
+                                <li><span>Software Developer | Mediacollege Amsterdam</span><br>2021 - expecting graduated in Juli 2025<br>Specialization game development</li>
+                                <li><span>VMBO-T | Paulus Mavo</span><br>2017 - 2021<br>Graduated</li>
+                            </ul>
+                        </div>
+                        <div class="Tab-Contents" id="Experience">
+                            <ul>
+                                <li><span>No Noise Project | Hilversum Media Park</span><br>February 2023 - April 2023<br>Making a Unreal Engine 5 VR game within a working environment</li>
+                                <li><span>Cargo Crusader Project | Hilversum Media Park</span><br>April 2023 - July 2023<br>Making a Unreal Engine 5 VR game within a working environment</li>
+                                <li><span>Toyboy Tactics Project | Hilversum Media Park</span><br>September 2023 - November 2023<br>Making a Unreal Engine 5 VR game within a working environment</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----Projects----->
+
+<div id="Projects">
+    <div class="Container">
+        <h2 class="Sub-Title">My <span>Projects</span></h2>
+        <div class="Work-List">
+            <div class="Work">
+                <img src="ImagesPRJ/DomeDefendersPRJ.png">
+                <a href="DomeDefenders.html">
+                    <div class="Layer">
+                        <h3>Dome Defenders</h3>
+                        <p>Space Project</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Work">
+                <img src="ImagesPRJ/TowerDefensePRJ.png">
+                <a href="TowerDefense.html">
+                    <div class="Layer">
+                        <h3>Tower Defense</h3>
+                        <p>TD Project</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Work">
+                <img src="ImagesPRJ/VSCartoPRJ.jpg">
+                <a href="Carto.html">
+                    <div class="Layer">
+                        <h3>Vertical Slice Carto</h3>
+                        <p>Vertical Slice Carto Project</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a href="Projects.html" class="btn">See more</a>
+    </div>
+</div>    
+
+    <script>
+
+        var TabLinks = document.getElementsByClassName("Tab-Links");
+        var TabContents = document.getElementsByClassName("Tab-Contents");
+
+        function OpenTab(TabName){
+            for(TabLink of TabLinks){
+                TabLink.classList.remove("Active-Link");
+            }
+
+            for(TabContent of TabContents){
+                TabContent.classList.remove("Active-Tab");
+            }
+            event.currentTarget.classList.add("Active-Link");
+            document.getElementById(TabName).classList.add("Active-Tab");
+        }
+
+    </script>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github <i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">X(Twitter)<i class="fab fa-twitter-square"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            CopyRight by Bor Dekker
+        </p>
+    </footer>
+
+</body>
+</html>
