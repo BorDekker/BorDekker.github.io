@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Bon Appmobile</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/projectSetUpStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>Project Bon Appmobile</h1>
+            <figure>
+                <img class="BAMbg" src="ImagesGifs-BonAppmobile/BonAppMobile2.0.png">
+                <figcaption class="figcaptionC">
+                    Bon Appmobile car
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this project about?
+            </h2>
+            <p class="flexP">
+                Bon Appmobile is an Unreal Engine 5 VR game project developed in the 4th period of my second year. 
+                In this project our group would make a game where you have to deliver something from point A to point B inside a vehicle.
+                Our idea was that you'd create pizza's inside the vehicle while driving around the map to deliver them at houses. 
+                You can use ingredients to make the vehicle go faster or slow down, there is also a steering wheel.
+                With it you can go left, right or straight at intersections. As for our art style, we chose to do it in a cartoon based art style.
+                <br><br>
+                Splines for the vehicle to drive on placed by Bor Dekker.
+                <br><br>
+                Fence spline function made and placed by Bor Dekker.
+                <br><br>
+                Project duration: 10 weeks, 3 days in each week.
+                <br><br>
+                In the link below, we have a gameplay video of our project.
+                <div>
+                    <a href="https://www.youtube.com/watch?v=fkkY3f7wKnk">Gameplay Trailer with music</a>
+                </div>
+            </p>
+
+            <div class="img-col">
+                <img class="SLIMG" src="ImagesGifs-BonAppmobile/SplineLayout.png">
+                <figcaption>
+                    The spline layout, these are the roads where you can drive.
+                </figcaption>
+            </div>
+
+            <h2>
+                My role & contribution in this project.
+            </h2>
+            <p class="flexP">
+                I was in the environment sub-team, my role was to implement art into our project.
+                <br>
+                I've also implemented a spline function all around the world and a fence function.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-BonAppmobile/HLO_CargoCrusader-SplineToolVehicle-World_4.0.gif">
+                    <figcaption>
+                        All of the splines in the world that I've placed manually.
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                A spline is a linear line with two ends, called points.
+                It is on this spline that you are riding on and having the option to choose between which direction you'd want.
+                The different colours in the gif above for the splines mean that those are all the different routes you can take, with the red spline being the main spline.
+                I have also implemented 3 bridges around the map to crossover and placed fences at every village.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-BonAppmobile/HLO_CargoCrusader-FenceSpline_RandomSeed.gif">
+                    <figcaption>
+                        Spline fence function
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I've made a Blueprint function where you can drag a spline and it will randomize the 2 fence assets that are in the Blueprint.
+                We did this so that there was some variation in the fence, instead of it being the same fence everywhere.
+                <br><br>
+                I have made this using Blueprints, first it's getting both the fence meshes. After that it's getting the bounding box of the placed mesh, breaks the box into min & max vector.
+                Then we get the X, Y and Z vector, we then have an offset float which is 5. We then do X vector + the offset to get it in our spacing float.
+                Then I'm getting our spline length to divide it by the spacing, of which will floor it to get the number of instances.
+                <br><br>
+                Then I'm creating a For Loop, in this For Loop I'm getting our location and the location of our newly spawned fence.
+                After that I made a branch, the branch will randomly choose 1 or 2. if it's true it will instance a fence, if it's false it will instance the other fence.
+                it will also make sure that the instanced meshes are standing correctly by getting it's location and rotation.
+                <br><br>
+                In the link below, you can see a video of the blueprint of the fence spline.
+                <div>
+                    <a href="https://www.youtube.com/watch?v=lT5Mb2yO3bA">Fence Function Blueprint Video</a>
+                </div>
+
+            <h2>
+                Retrospective
+            </h2>
+            <p class="flexP">
+                This was a cool project, seeing that our world at first is nothing but grey boxes.
+                But then in the end looking so beautiful and colourful, I'm not that big of a fan for VR games.
+                But this was a lot of fun making and playing, the ones who play tested this game at the end of our project loved it.
+                <br><br>
+                I've also learned that even things that aren't fun to do are necessary for a good game, such as placing down the splines.
+                it took a lot of time for me to place them all down, even more time when they're were changes. 
+                But I would do it all over again to achieve making a game like this.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github<i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">X(Twitter)<i class="fab fa-twitter-square"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            @CopyRight by Bor Dekker
+        </p>
+    </footer>
+    
+</body>
+</html>
