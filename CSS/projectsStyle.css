@@ -76,6 +76,10 @@ nav ul li a:hover::after{
 background-color: #6CC5D9;
 }
 
+.CV{
+    padding: 30px;
+}
+
 .Work-List{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));

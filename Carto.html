@@ -41,50 +41,86 @@
             </h2>
             <p class="flexP">
                 In the second period of my second year, we had a project called vertical slice. In this project, you and your team would recreate a game that was made by a company.
-                We had 2 levels of games, easy and expert. In the video's below, you can see which games you could choose out of. My team and I chose Carto, because none of our artists could do 3D.
+                We had 2 difficulty's of games, easy and expert. My team and I chose Carto from easy, because none of our artists could do 3D.
                 Our team consisted of 3 developers and 5 artists, together we tried our best to recreate the game Carto.
                 <br><br>
-                In the video below, you'll find my gameplay video of Tower Defense.
+                Project duration: 10 weeks, 2 1/2 day each week.
+                In the link below, we have the gameplay of our Carto.
+                <br>
+                In the link below that, we have Carto of Sunhead Games that we tried to recreate.
                 <div>
-                    <a href="https://www.aseprite.org">Aseprite</a>
+                    <a href="https://www.youtube.com/watch?v=r2mE-p9Wct0">Vertical Slice Project Carto</a>
                 </div>
                 <br>
                 <div>
+                    <a href="https://www.youtube.com/watch?v=JQVo6G3KQ9Q&t=354s">Sunhead Games Carto</a>
+                </div>
+                <br><br>
+                <div>
                     <i class="fab fa-github-square fa-2xl"></i>
-                    <a href="https://github.com/BorDekker/TowerDefenseGame2.0">Project Tower Defense</a>
+                    <a href="https://github.com/BorDekker/TowerDefenseGame2.0">Vertical Slice Carto</a>
                 </div>
             </p>
 
             <h2>
-                My role and the main gameplay of my Tower Defense.
+                My role & contribution to this project
             </h2>
             <p class="flexP">
-                My role was making a Tower Defense game by myself.
+                My role was making movement for the player, implement art & animations.
+                <br>
+                And lastly create an AI that walks around an certain area.
             </p>
 
             <div class="container">
                 <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs - TowerDefense/TD - Gameplay.gif">
+                    <img class="imgPJ" src="ImagesGifs-VS_Carto/AnimationsCharacters.gif">
                     <figcaption>
-                        Gameplay Tower Defense
+                        Animations characters
+                    </figcaption>
+                    <img class="imgPJ" src="ImagesGifs-VS_Carto/AnimationMother.png">
+                    <figcaption>
+                        This is where I place which animation the characters play, I did this for the mother with baby & kid running around.
                     </figcaption>
                 </div>
             </div>
             <p class="flexP">
-                Creating a game in 8 weeks was a very fun and challenging task to do, creating multiple functions & mechanics to create my game.
-                I first started small, creating 2D towers in Unity that can kill enemies and a function that can spawn enemies.
+                I made the movement of the player first making a Vector 3D velocity, the reason why is because this was a 3D game. 
+                We did this for our camera angle, after figuring out that in 2D it wouldn't work.
+                After that I made a float, which would define our movement speed for the player.
+                I made an animator, in our update I'm setting the animator to 0 speed.
                 <br><br>
-                Slowly I did biger To Do's such as creating a wave system for enemies to spawn in between and placing towers with money. 
-                After I've created a small tower defense game with the basic mechanics, I started creating art and thinking of 2 unique mechanics.
-                <br><br>
-                I came up with 2 major unique mechanics, a hero you can move around with your mouse & towers that will upgrade themselves the more enemies they kill.
+                When I'm pressing either W, A, S, or D. It will change its location towards a direction x movement speed x Time.DeltaTime.
+                Time.DeltaTime is the amount of seconds it took for the engine to process the previous frame.
+                After that, it will change the animation speed from 0 to the movement speed. 
+                It will also change animations from idle animation to walking animation.
             </p>
 
             <div class="container">
                 <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs - TowerDefense/heroMechanics.png">
+                    <img class="imgPJ" src="ImagesGifs-VS_Carto/MovementCodeVS.png">
                     <figcaption>
-                        Visual Hero Sheet explaining the major code of my hero function.
+                        C# code for player movement
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I first made a index for waypoints, these points are where the AI kid can go to when it's finished going to another point.
+                Then I setted its movement speed, after that I placed in the void Start that when the game starts. 
+                The waypoint index will be equal to an random number between 0 and 12.
+                I'm then setting the transform position equal to the location of the waypoint index.
+                <br><br>
+                In the update I'm setting transform position equal to an Vector3.MoveTowards, what this does is that the AI kid will go towards the transform position of a waypoint.
+                I then made an If statement, when you arrive at an waypoint transform position.
+                AI kid will choose a random number between 0 and 12, then it will move towards a new waypoint transform position.
+                When AI kid reaches that position, it will choose a new random number.
+                This is how he walks around while playing his animation.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-VS_Carto/AIKid_WaypointIndex.png">
+                    <img class="imgPJ" src="ImagesGifs-VS_Carto/AICodeVS.png">
+                    <figcaption>
+                        C# code for AI kid running around.
                     </figcaption>
                 </div>
             </div>
@@ -93,12 +129,12 @@
                 Retrospective
             </h2>
             <p class="flexP">
-                I loved the development of making a video game, looking weird and small in the beginning.
-                But slowly looking better and everything combining with eachother.
+                This was an interesting project, recreating a game that already existed was quite challenging.
+                Though using the game as reference to check if the art style was made correctly, check if character & player speed matches with the game.
                 <br><br>
-                This was an excellent way to show how game development goes, I learned a lot from this.
-                For example, I've learned that designing and creating the world, enemies, hero with pixel art is a lot of fun. 
-                But that it also does take a lot of time and effort to create this world.
+                Although we didn't manage to finish this game, I'd say that so far everything looks good.
+                We sadly had a lot of bumps in our development, but we still managed to make a decent recreation of Carto.
+                I learned something about making an AI which was cool & I've also learned how to implement animations into Unity.
             </p>
         </article>
     </main>
@@ -115,7 +151,7 @@
         </p>
         <br><br>
         <p class="CopyRight">
-            @CopyRight by Bor Dekker
+            &copy; CopyRight 2023 by Bor Dekker
         </p>
     </footer>
     
