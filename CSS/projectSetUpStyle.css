@@ -207,6 +207,11 @@ img{
     max-width: 100%;
 }
 
+.imgPJT{
+    max-width: 100%;
+    display: inline-block;
+}
+
 .SLIMG{
     width: 50%;
     height: auto;

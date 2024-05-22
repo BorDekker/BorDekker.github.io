@@ -50,6 +50,10 @@
                 Project duration: 2 1/2 months.
                 <br><br>
                 Development Team: 7 people.
+                <br><br>
+                Engine: Unity
+                <br><br>
+                Programming language: C#
                 <br><br><br>
                 You can watch the video below to see the gameplay.
             </p>
@@ -65,135 +69,82 @@
 
             <div class="container">
                 <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/VFX_DreamInducingGas_V2.gif">
+                    <img height="600" class="imgPJ" src="ImagesGifs-Holobox/FoodIngredient.png">
                     <figcaption>
-                        A gas VFX that will appear at the start of the game.
+                        The order card, this shows what the customer wants & which ingredients you need to make it.
                     </figcaption>
                 </div>
             </div>
             <p class="flexP">
-                This was my first VFX I started making for the project.
-                We wanted a gas that would enter our room, then we would use another gas vfx to make the room slowly appear with more gas.
-                Before I started making this I used Unreal Engine documentation to make the lightning VFX above.
-                Because I did that I was more familiar with Niagara.
+                When the game begins the customer will choose a order out of a menu list that I created in another script.
+                The customer will choose randomly which order he'd want to have, I made it so that when the game begins the order is equal to the restaurant menu list.
+                Then it will choose between 0 being the first item on that list, to the last item on that list which is the restaurant menu list length.
+            </p>
+            <img class="imgPJ" src="ImagesGifs-Holobox/CustomerAICode.png">
+            <br><br><br><br>
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs-Holobox/MenuListCode.png">
+                    <figcaption>
+                        This is the restaurant menu list.
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                This here is the restaurant menu list, from here the customer will choose a random order that the player will then have to make.
             </p>
 
             <div class="container">
                 <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/NS_DreamInducingGas_Code.png">
+                    <img height="600" class="imgPJ" src="ImagesGifs-Holobox/Trashcan.gif">
                     <figcaption>
-                        Dream inducing gas VFX Niagara code
+                        This is the trash can, where you can get rid of ingredients.
                     </figcaption>
                 </div>
             </div>
             <p class="flexP">
-                In "Initialize particle" where we decice the size of our particle, below that we have "Shape location".
-                With that we decide the shape of our particle, in this case we chose a sphere shape.
-                In "Add velocity" we decide the particle's speed and in which shape it will be shooting. 
-                In this case we will shoot in the shape of a cone, so that the particle's will be a bit more spread out the longer the particle lives.
+                If you picked up the wrong ingredient you can throw it away in the trash can, for example when you burn the wrong ingredient.
+                The code here below shows how it works, when you drag an ingredient or object to the trash can it will check if the oject is an ingredient.
+                For example dragging rice to the trash can will destroy the rice since it's an ingredient, but if you drag the knife to the trash can it won't be destroyed since it's not an ingredient.
+            </p>
+            <img class="imgPJ" src="ImagesGifs-Holobox/TrashcanCode.png">
+            <br><br><br><br>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="600" class="imgPJ" src="ImagesGifs-Holobox/Knife_Hitbox.png">
+                    <figcaption>
+                        This is the knife you use to cut the ingredients
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                This is the knife you use in the game, the green box you see around it is the collider detector.
+                With that green box it can check if an object is an ingredient that can be cut, such as the bok choy and the mushrooms
                 <br><br>
-                In "Particle state" it makes the particles die when they have reached the amount time they live.
-                I have turned off "Gravity force" & "Drag" so that the particle appears more floaty, otherwise it will go down because of gravity.
-                And finally in "Collision" it allows the particles to have collision with other gameObjects that have collision, because if the particle doesn't have collision they will phase through the object.
+                The code below here shows how it works, when you drag the knife and slash the bok choy for example.
+                The ingredient cut amounts will go up by 1, the cut amounts is how many cuts the ingredient need to be cut where it will then change in a cut version of the bok choy.
             </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/VFX_DreamGasCloud_V2.gif">
-                    <figcaption>
-                        Dream gas cloud VFX
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                This is the gas VFX that would show up when the dream inducing gas has been activated.
-                This gas would slowly become a gas cloud where you can hardly see through. After some time had passed you (the player) would be teleported to the game.
-            </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/NS_DreamGasCloud_Code.png">
-                    <figcaption>
-                        Dream gas cloud VFX code
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                In "Initialize particle" is where I decide the size of our particle.
-                In "Shape location" is where I decided to have the particles spawn in a round circle within a certain radius.
-                <br><br>
-                With "Wind force" & "Aerodynamic drag" we can make the particles move a small bit around like falling snow.
-                With "Scale sprite size" the particles we each have a different size when they spawn, some big and others small.
-            </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/VFX_LaserBeam_V2.gif">
-                    <figcaption>
-                        Laser VFX
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                This is the laser VFX, this will be used when your directing the laser at certain targets to get a puzzle key.
-            </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/NS_LaserBeam_Code.png">
-                    <figcaption>
-                        Laser VFX code
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                In "Spawn Beam" we spawn our beam, we get a flat white long 2D sprite.
-                In "Shape location" is where I decided to have the particles spawn in a round circle within a certain radius.
-                <br><br>
-                In the sparkles_VFX in "Shape location" & "Add velocity" we decide in what shape the particles go shooting and in what direction.
-                So we made it so that the particles shoot in a wide cone direction, so that it shoots in almos every direction.
-                So when the laser beam hits something, the sparkles will be there at the end. 
-            </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/VFX_GasTube_V2.gif">
-                    <figcaption>
-                        Gastube VFX
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                Gastube VFX, VFX that is inside the tube of the final puzzle.
-            </p>
-
-            <div class="container">
-                <div class="img-col">
-                    <img class="imgPJ" src="ImagesGifs-ExperimentOneiro/NS_GasTube_Code.png">
-                    <figcaption>
-                        Gastube VFX code
-                    </figcaption>
-                </div>
-            </div>
-            <p class="flexP">
-                For this VFX I used multiple emitters to get different variants of gasses, so they all have a different texture & material.
-                I also used different speeds for the rest so that you that it's noticeable to see the difference and so that they're not all close together.
-                <br><br>
-                I've also turned the collision of for these ones, because the particles were glitching at the bottom of the tube where they spawn. 
-                By turning it off they simply phase through the bottom so that it's no longer noticeable that some of them spawn being stuck and glitching.
-            </p>
+            <img class="imgPJ" src="ImagesGifs-Holobox/CuttingCode.png">
+            <img class="imgPJ" src="ImagesGifs-Holobox/KnifeCutIngredient.gif">
+            <br><br><br><br>
 
             <h2>
                 Retrospective
             </h2>
             <p class="flexP">
-                This was an interesting project, I like to try new things out since I don't know what my role or job is in the game industry.
-                Making VFX seemed fun and interesting to do, so I chose that for this project. Although I'm not an artist, I liked what I made.
-                I do think I would've wanted to make more diverse VFX, since lots of these were gas.
+                This was a very fun and interesting project, we did have some setbacks but we managed to display a beautiful project at HvA.
+                One of our major setbacks was that the Holobox's touch screen didn't work, so we couldn't play our game on it.
+                So we then decided to display & play it on the screen next to it, where the touch screen did work.
                 <br><br>
-                But this was my first time as well, so I think I did pretty good.
-                I learned quite a lot, so maybe in the future I'll do a personal project where I'll focus more on the VFX and diversity.
-                But I'm also interested in making a cinematic with Unreal Engine, so I'll do that first in the near future.
+                It was fun to make a project in Unity again after a long while, although I had to quickly remember how to work in C# again.
+                I've also learned that when making a new C# code for something that I should always make a new script for it, since I always tried to do it in the same script.
+                But a colleague of mine said to me to always do it in a new script, because a script always have to have 1 main purpose.
+                <br><br>
+                Not that it takes care of the customerAI, cutting of the knife & the cooking of bacon for example.
+                So I'll definitely keep my eye out more to follow this, since I don't do this most times.
+                I can't wait to make more amazing projects like this in the future of my career!
+
             </p>
         </article>
     </main>
