@@ -83,6 +83,60 @@ nav ul li a:hover::after{
     color: #BF9B6F;
 }
 
+.header-text-animatingjob span{
+    position: relative;
+}
+
+.header-text-animatingjob span::before{
+    content: "Unreal Engine Generalist";
+    color: #F2F2F0;
+    animation: words 20s infinite;
+}
+
+.header-text-animatingjob span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #1e1e21;
+    border-left: 3px solid #BF8B4B;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #BF8B4B;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Unreal Engine Generalist";
+    }
+    21%, 40%{
+        content: "Unreal Engine Filmmaker";
+    }
+    41%, 60%{
+        content: "Unreal Engine Animator";
+    }
+    61%, 80%{
+        content: "Unreal Engine Artist";
+    }
+    81%, 100%{
+        content: "Unreal Engine Game Designer";
+    }
+}
+
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 8px);
+    }
+}
+
 /*-----About Me-----*/
 
 #AboutMe{
