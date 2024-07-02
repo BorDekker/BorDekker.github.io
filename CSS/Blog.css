@@ -108,6 +108,24 @@ nav ul li a:hover::after{
     color: #BF9B6F;
 }
 
+.Top{
+    width: 80px;
+    height: 80px;
+    background: #BF8B4B;
+    border: 4px solid #F2F2F0;
+    font-size: 150%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    color: #1F211E;
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 footer{
     width: 100%;
     text-align: center;
