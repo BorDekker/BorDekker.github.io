@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxytocine Machine 2.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/projectSetUpStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>Project Oxytocine Machine 2.0</h1>
+            <figure>
+                <img class="BAMbg" src="ImagesGifs - OxytocineMachine2.0/Environment.png">
+                <figcaption class="figcaptionC">
+                    The environment of our project.
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this project about?
+            </h2>
+            <p>
+                Project Oxytocine Machine 2.0 is a prototype project for StudioVRIJ, it's a project where people from long distances can have a deep personal connection with each other via Virtual Reality.
+                We were comepletely free in designing & creating interactions for this project, the environment would be a dreamy forest where you sit on mushrooms.
+                <br><br>
+                We were also free in designing & creating an entire different environment, but we liked the idea of this happening in a forest.
+                Interactions are that when the player does or touches something, something happens.
+                Like for example if the both players touch each others hand, the hands will glow up.
+                
+                <br><br>
+                Project date: From May 2024 - Juli 2024
+                <br><br>
+                Project duration: 2 months.
+                <br><br>
+                Development Team: 8 people.
+                <br><br>
+                Engine: Unreal Engine
+                <br><br>
+                Programming language: Blueprints
+                <br><br><br>
+                You can watch the video below to see the gameplay, video was recorded on a meta quest 3.
+            </p>
+            
+            <video width="480" height="480" src="ImagesGifs - OxytocineMachine2.0/Gameplay.mp4" controls></video>
+
+            <h2>
+                My role & contribution in this project.
+            </h2>
+            <p class="flexP">
+                My role was being a programmer for this project, my contribution is creating & developing the touch interaction, the animal interaction and the handtracking.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs - OxytocineMachine2.0/AnimalInteraction2.gif">
+                    <figcaption>
+                        Animal interaction
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                When you touch the animal (frog in this case) the animal will walk away for moment & come back.
+                What happens is when you touch the animal, a timer will go off. 
+            </p>
+            <iframe class="imgPJ" width="1020" height="400" src="https://blueprintue.com/render/fr_i13qf/" scrolling="no" allowfullscreen></iframe>
+            <p class="flexP">
+                When the timer is going off, by using a timeline node it will walk in a direction specified in the “Add Actor World Transform” node. 
+                So when the timer goes off, it will move in 0.5 Y direction with the speed being 0.5. 
+                Then when it has reached its destination, it will come back with a speed & direction of -0.5 Y. 
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <iframe class="imgPJ" width="1020" height="400" src="https://blueprintue.com/render/byvaks8o/" scrolling="no" allowfullscreen></iframe>
+                    <figcaption>
+                        This is the blueprint of an actor component, we placed this actor component in the animal interaction blueprint.
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                When the timer counts down, it will first check to see if the timer is going down. 
+                When true the timer will go -1 every delta seconds. Afterwards it checks if timer has reached its threshold.
+                When true then the timer will be reset & timer is stopped.
+                <br><br>
+                When the timer counting down is false, then it will check if  the timer has been stopped.
+                When true it will count back with +1 every delta second, when it has reached a threshold then the timer will be stopped & it will be reset again.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <iframe class="imgPJ" width="1020" height="400" src="https://blueprintue.com/render/bs1i1acp/" scrolling="no" allowfullscreen></iframe>
+                    <figcaption>
+                        Touch interaction blueprint
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                For the touch interaction I've made it so that when your touching the other players hand, your & their hand will glow up.
+                When the collider of the hand collides, it will set the boolean overlapping for left (or right) hand true.
+                Then it will cast to the VRPawn where it will get the amount of players, then it will check if the amount of players is not equal to player number.
+                When true it will set the overlay material to cyan for the remote oculus hand left (or right depending which hand is overlapping).
+                <br><br>
+                When you're overlapping, a float will go into a macro where the float will go up +1 every 0.4 seconds.
+                Then it will come out of the macro & check if the float is higher or equal to 15.
+                If true then it will set the float to 15 & stop the macro.
+                When you're no longer overlapping with the other players hand it will set the boolean back to false, set the timer to 0 & set the overlay material back to its basic material.
+
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <iframe class="imgPJ" width="1020" height="400" src="https://blueprintue.com/render/0pm89sfz/" scrolling="no" allowfullscreen></iframe>
+                    <figcaption>
+                        A macro I created & used for touch interaction.
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I first used an “Event tick” for this interaction, but later found out that when left hand stops colliding with the other left hand.
+                The right hands will stop from glowing up from 0 to 15, that happens because when a hand stops colliding the event tick is disabled.
+                So I knew that I had to replace that with something else, something that isn't depended on an event tick.
+                Because otherwise the hands will stop glowing up midway.
+                <br><br>
+                So then I decided to make a macro called “For Each Loop With Delay Plus Left”, in this macro a float will enter.
+                The float will then be assigned to a value, then it will check if the hand is overlapping.
+                When true the float that entered the macro will get +1, the result of that will then be added to a “Primitive Data Float” of a material.
+                It will be added every 0.4 seconds, the  “Primitive Data Float” is a parameter from a material.
+                When the parameter goes up, the material will be more emissive (More glowing).
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img class="imgPJ" src="ImagesGifs - OxytocineMachine2.0/TouchInteraction.gif">
+                    <figcaption>
+                        Touch interaction
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                After adding the new float to a “Primitive Data Float”, it will then check if the float is higher or equal to 15.
+                If it is not higher or equal to 15, then every time it is lower then 15 it will reset the assign process, making it do the process again until it has reached 15.
+                When it has reached 15, a boolean will be set to true & the loop will be completed.
+                <br><br>
+                For the handtracking I used the Meta XR plugin from the Unreal marketplace, with that plugin & the help of a video I managed to create handtracking.
+                We also had to make some changes compared to the video, for example we tried to test the handtracking after we thought it was done but the hands weren't on the correct location.
+                The hands we're 180 degrees rotated the wrong way, so when you put your hand on the table and then flip it, that's how it looked like in VR.
+                So we fixed that by changing the rotation in the blueprint, now the hands spawned correctly and move correct as well.
+            </p>
+
+            <h2>
+                Retrospective
+            </h2>
+            <p class="flexP">
+                This project was lots of fun doing, I learned many new things.
+                For example I learned how to make a macro with an delay & I learned how to make handtracking for an VR project.
+                This project also went quite smooth when it came to our sprint reviews, every time StudioVRIJ was quite happy with our work.
+                <br><br>
+                We did get feedback as well, it mostly came to lighting & performance. This project was in overall a 10/10, really good solid project to do.
+                I'm excited to see what StudioVRIJ will be in the near future, I would love it if I can make a project like this for them again.
+                I enjoyed making the interactions & testing the interactions, what I also loved is that when other people played it they really liked it.
+                So that felt really good, this is a project to remember.
+            </p>
+        </article>
+    </main>
+
+    <a class="Top" href="#Header">Top</a>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github<i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">X(Twitter)<i class="fab fa-twitter-square"></i></a>
+            <br>
+            <a href="https://www.linkedin.com/in/bor-dekker-9b8bbb297/">Linkedin <i class="fa-brands fa-linkedin"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            &copy; CopyRight 2024 by Bor Dekker
+        </p>
+    </footer>
+    
+</body>
+</html>

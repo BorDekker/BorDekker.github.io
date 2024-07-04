@@ -326,7 +326,7 @@ nav ul li a:hover::after{
     color: #1F211E;
     position: fixed;
     bottom: 120px;
-    right: 30px;
+    right: 35px;
     text-decoration: none;
     display: flex;
     justify-content: center;
