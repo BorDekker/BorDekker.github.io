@@ -115,16 +115,16 @@ nav ul li a:hover::after{
         content: "Unreal Engine Generalist";
     }
     21%, 40%{
-        content: "Unreal Engine Filmmaker";
+        content: "3D Artist";
     }
     41%, 60%{
-        content: "Unreal Engine Animator";
+        content: "CGI/VFX Artist";
     }
     61%, 80%{
-        content: "Unreal Engine Artist";
+        content: "3D Animator";
     }
     81%, 100%{
-        content: "Unreal Engine Game Designer";
+        content: "3D Sculptor";
     }
 }
 
