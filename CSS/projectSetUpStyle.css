@@ -276,6 +276,10 @@ video{
     border-radius: 5px;
 }
 
+iframe{
+    width: 100%;
+}
+
 .Top{
     width: 80px;
     height: 80px;
