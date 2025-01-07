@@ -66,6 +66,57 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+/*-----Different Kind of projects-----*/
+
+.ProjectTabInfo{
+    color: white;
+}
+
+.Tab-Titles{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Tab-Links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.Tab-Links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #c2873a;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.Tab-Links.Active-Link::after{
+    width: 50%;
+}
+
+.Tab-Contents ul li{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0;
+}
+.Tab-Contents ul li span{
+    color: #BF9B6F;
+    font-size: 14px;
+}
+.Tab-Contents{
+    display: none;
+}
+.Tab-Contents.Active-Tab{
+    display: block;
+}
+
 /*-----All My Projects-----*/
 
 #Projects{
