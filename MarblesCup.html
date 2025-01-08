@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxytocine Machine 2.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/projectSetUpStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>Marbles & Cup project</h1>
+            <figure>
+                <img class="BAMbg" src="ImagesGifs-GumballsFallInCup/GumballsFallInCup.png">
+                <figcaption class="figcaptionC">
+                    Marbles falling into a cup simulation
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this project about?
+            </h2>
+            <p>
+                This is a project where I wanted to let myself be more familiar with houdini.
+                So I decided to make a small simulation where I let something fall into a object with collision.
+                In this project I used a cup where I let colorfoul marbles fall into it.
+                
+                <br><br>
+                Project date: December 2024
+                <br><br>
+                Project duration: 1 week
+                <br><br>
+                Development Team: Solo project
+                <br><br>
+                Engine: None
+                <br><br>
+                Software: Houdini
+                <br><br>
+                Programming language: Node system
+                <br><br><br>
+                You can watch the video below to see my final product
+            </p>
+            
+            <iframe width="480" height="480" 
+            src="https://www.youtube.com/embed/m3Vph_9aLoI?si=syULP-p61Igdp2kF" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                
+            </iframe>
+
+            <h2>
+                My role & contribution in this project
+            </h2>
+            <p class="flexP">
+                Creating a simulation where marbles fall into a cup.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/BasicCupShape.gif">
+                    <figcaption>
+                        Starting shape of cup
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I first started by making the cup.
+                I created a tube node, tweaked the settings so that the top would be spread out more.
+                Giving it more a cup shape, then I gave it a yellow color.
+
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MadeCupShape.gif">
+                    <figcaption>
+                        Making the cup more defined
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                Then I added a polyfill so that the bottom would be closed, meaning that there is no more hole at the bottom of the cup.
+                Following that I added a soft transform.
+                With that node I stretched out the middle of the cup, making it more round.
+                Then by adding poly extrude I pulled the outside faces so that it has a more thicker shape.
+                <br><br>
+                After that I added a reverse which reverses faces, giving it the same color outside as the inside.
+                Then I added a poly bridge, for that I selected two faces of the cup.
+                One up and one below, then with the poly bridge I connected those faces together.
+                Then I bended the shape of that giving the cup it's handle.
+
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/CupElavated&Subdivide.gif">
+                    <figcaption>
+                        Elevating the cup & subdividing
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                Lastly for the cup I added a matchsize & subdivide.
+                Matchsize elevates the cup to the ground plane.
+                Subdivide gives the cup more faces which makes it more detailed & smooth.
+                <br><br>
+                Then I created a box for the marbles.
+                I then elevated the box above the cup with a different matchsize node.
+                Then by adding a scatter, it deletes the box and in it's place are points.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MarblesShape.gif">
+                    <figcaption>
+                        Creating box above cup, then in box's place scattered points
+                    </figcaption>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/ReplacesPointsWithSphere.gif">
+                    <figcaption>
+                        Randomizing points and placing a sphere on all the points locations
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                Then by adding 2 attribute randomizers I randomize every point with their own size and location.
+                Afterward I added a sphere, which I then connect to a copy to point node.
+                Connecting the attribute randomizers to the copy to point node as well would place a sphere on every point.
+                Then I finally merge the cup and marbles into the same scene in the gif below.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MergesCupMarbles.gif">
+                    <figcaption>
+                        Merging the cup and marbles into the same scene
+                    </figcaption>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/ImportsScene.gif">
+                    <figcaption>
+                        Importing scene into final stage
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I've then imported everything into the final stage as u can see above.
+                Then I added colors to the cup and marbles, giving them a more metallic material.
+                And lastly I added a camera to get the perfect shot, 2 point lights to light my scene and finally the render settings.
+                You can see this in the gifs below.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MaterialsAdded.gif">
+                    <figcaption>
+                        Giving cup and marbles a more metallic look
+                    </figcaption>
+                    <br><br>
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/AddedCameraLights.gif">
+                    <figcaption>
+                        Adding a camera, 2 point lights and render settings
+                    </figcaption>
+                </div>
+            </div>
+
+            <h2>
+                Retrospective
+            </h2>
+            <p class="flexP">
+                This project was fun to do, creating a simple but yet satisfying simulation.
+                It turned out really well.
+                I'm hoping to slowly create more complex and beautiful simulations in the future.
+                <br><br>
+                But for now I see this as an successful project.
+                I learned how to put a object on the locations of points and how to make an object into points.
+                I learned how to extrude an object to make it thicker and how to connect 2 faces of an object into an handle for example.
+            </p>
+        </article>
+    </main>
+
+    <a class="Top" href="#Header">Top</a>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github<i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">X(Twitter)<i class="fab fa-twitter-square"></i></a>
+            <br>
+            <a href="https://www.linkedin.com/in/bor-dekker-9b8bbb297/">Linkedin <i class="fa-brands fa-linkedin"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            &copy; CopyRight 2025 by Bor Dekker
+        </p>
+    </footer>
+    
+</body>
+</html>

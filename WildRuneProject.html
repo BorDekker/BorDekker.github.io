@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxytocine Machine 2.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/projectSetUpStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>Wild Rune project</h1>
+            <figure>
+                <img class="BAMbg" src="ImagesGifs-WildRune/WildRune.png">
+                <figcaption class="figcaptionC">
+                    Abstract wild rune simulation
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this project about?
+            </h2>
+            <p>
+                This project is about learning houdini and getting used to the layout and getting back in touch with it since my last project No Noise.
+                This time I saw a cool effect in Arcane season 2 where there was this sphere that look all lovecraftian and magical.
+                So I decided to try re-create that in Houdini with the help of an abstract tutorial from Houdini self on their website.
+                
+                <br><br>
+                Project date: December 2024
+                <br><br>
+                Project duration: 1 week
+                <br><br>
+                Development Team: Solo project
+                <br><br>
+                Engine: None
+                <br><br>
+                Software: Houdini
+                <br><br>
+                Programming language: Node system
+                <br><br><br>
+                You can watch the video below to see my final product
+            </p>
+            
+            <iframe width="480" height="480" 
+            src="https://www.youtube.com/embed/JwbvBau_9yw?si=G7fDn9xfHUZRlcYS" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+            </iframe>
+
+            <h2>
+                My role & contribution in this project
+            </h2>
+            <p class="flexP">
+                Recreating the wild rune from Arcane season 2
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-Reference.png">
+                    <figcaption>
+                        Wild rune reference
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I looked at the movement & color from the reference to get an idea how this would look in my final product.
+                So I with the help of Houdini's own tutorial I remembered how the program worked and got used to the layout & how to move the camera.
+                Then I started by adding a circle to my scene, since the base form of the wild rune is a sphere.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-Shape.gif">
+                    <figcaption>
+                        Creating the shape & lines
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I then added a transform node to scale down the Y to 0.5, giving it a squished sphere look.
+                Then I added a scatter node which would replace my sphere with a sphere form of points.
+                Then adding a line node and combining that with the scatter node would put a line on all my points of the sphere.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-Points.gif">
+                    <figcaption>
+                        Creates points at the bottom of the line & below the middle
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                By adding a group expression node it creates points at the bottom of the line.
+                Then I added a vellum hair node so that all the lines had points above the bottom.
+                With the help of another node I can create them to be like hair.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-WindyCompress.gif">
+                    <figcaption>
+                        Making the lines like hair & then compressing them into a shape
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I then added a vellum solver which made all the lines like hair.
+                Connecting the vellum solver to the connect adjacent pieces node would add more points creating more hair.
+                Then I added the attribute blur which would make the hair blurry and compresses it into a round shape.
+                As the final step of creating this simulation I added color to the effect, using multiple colors to make it look as close to the wild rune as possible.
+            </p>
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-Color.gif">
+                    <figcaption>
+                        Adding color to the simulation
+                    </figcaption>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-WildRune/WildRune-End.gif">
+                    <figcaption>
+                        Creating network to add my scene & render settings
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I then created a network in which I imported my scene and added a background color.
+                Then I added a camera & render settings, creating the final product you see in the video above.
+            </p>
+
+            <h2>
+                Retrospective
+            </h2>
+            <p class="flexP">
+                This project was a lot of fun, I love creating simulations from stuff I love such as Arcane.
+                Although I did have some trouble with rendering the video.
+                I didn't know you were not able to render out an mp4 on your laptop on the free version of Houdini.
+                So I decided to render it out in MPlay and then record my screen to get the footage.
+                <br><br>
+                The tutorial from Houdini helped out alot, since I always have difficulty trying to see in my head how something could be done.
+                But I'm getting better at it, so long as I make simulations, fx ect from movies, series and more.
+                Houdini is a difficult program to learn, but the results you get are amazing! 
+                Can't wait see to what I'll make with it in the future.
+
+            </p>
+        </article>
+    </main>
+
+    <a class="Top" href="#Header">Top</a>
+
+    <footer>
+        <p>
+            Bor Dekker
+            <br>
+            bor.dekker@icloud.com <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/BorDekker?tab=repositories">Github<i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://twitter.com/B0rD3kK3R">X(Twitter)<i class="fab fa-twitter-square"></i></a>
+            <br>
+            <a href="https://www.linkedin.com/in/bor-dekker-9b8bbb297/">Linkedin <i class="fa-brands fa-linkedin"></i></a>
+        </p>
+        <br><br>
+        <p class="CopyRight">
+            &copy; CopyRight 2025 by Bor Dekker
+        </p>
+    </footer>
+    
+</body>
+</html>
