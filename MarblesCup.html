@@ -30,9 +30,9 @@
         <article>
             <h1>Marbles & Cup project</h1>
             <figure>
-                <img class="BAMbg" src="ImagesGifs-GumballsFallInCup/GumballsFallInCup.png">
+                <img class="BAMbg" src="ImagesGifs-GumballsFallInCup/GumballsFunnelCup.png">
                 <figcaption class="figcaptionC">
-                    Marbles falling into a cup simulation
+                    Marbles falling into a funnel, then going through the funnel into a cup
                 </figcaption>
             </figure>
 
@@ -41,8 +41,8 @@
             </h2>
             <p>
                 This is a project where I wanted to let myself be more familiar with houdini.
-                So I decided to make a small simulation where I let something fall into a object with collision.
-                In this project I used a cup where I let colorfoul marbles fall into it.
+                So I decided to make a small simulation where I let something fall onto something and then into a object with collision.
+                In this project I used a marbles to fall onto a funnel and then go from the funnel into a cup.
                 I made this project with the help of an Houdini tutorial on their website.
                 
                 <br><br>
@@ -62,18 +62,18 @@
             </p>
             
             <iframe width="480" height="480" 
-            src="https://www.youtube.com/embed/m3Vph_9aLoI?si=syULP-p61Igdp2kF" 
+            src="https://www.youtube.com/embed/fpQHtlw53K8?si=Tcvxnd9ph6VSNrCZ" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                
+
             </iframe>
 
             <h2>
                 My role & contribution in this project
             </h2>
             <p class="flexP">
-                Creating a simulation where marbles fall into a cup.
+                Creating a simulation where marbles fall into a funnel and then go from the funnel into a cup
             </p>
 
             <div class="container">
@@ -150,20 +150,34 @@
                 Then by adding 2 attribute randomizers I randomize every point with their own size and location.
                 Afterward I added a sphere, which I then connect to a copy to point node.
                 Connecting the attribute randomizers to the copy to point node as well would place a sphere on every point.
-                Then I finally merge the cup and marbles into the same scene in the gif below.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/FunnelCreation.gif">
+                    <figcaption>
+                        Making the funnel
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                I made the funnel by adding a tube first.
+                Then by making the top wider, afterward I extruded it to give it more thickness.
+                And lastly I gave it a color & placed it above the cup with matchsize.
+                Then I merge the cup, funnel and marbles into the same scene in the gif below.
             </p>
             <div class="container">
                 <div class="img-col">
-                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MergesCupMarbles.gif">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MergesCupMarblesFunnel.gif">
                     <figcaption>
-                        Merging the cup and marbles into the same scene
+                        Merging the cup, marbles and funnel into the same scene
                     </figcaption>
                 </div>
             </div>
 
             <div class="container">
                 <div class="img-col">
-                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/ImportsScene.gif">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/ImportScene2.gif">
                     <figcaption>
                         Importing scene into final stage
                     </figcaption>
@@ -171,20 +185,16 @@
             </div>
             <p class="flexP">
                 I've then imported everything into the final stage as u can see above.
-                Then I added colors to the cup and marbles, giving them a more metallic material.
-                And lastly I added a camera to get the perfect shot, 2 point lights to light my scene and finally the render settings.
+                Then I added colors to the cup, funnel and marbles. 
+                Giving them a more metallic material.
+                And lastly I added a camera to get the perfect shot, 4 point lights to light my scene and finally the render settings.
                 You can see this in the gifs below.
             </p>
             <div class="container">
                 <div class="img-col">
-                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/MaterialsAdded.gif">
+                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/AddingMaterials&Lights.gif">
                     <figcaption>
-                        Giving cup and marbles a more metallic look
-                    </figcaption>
-                    <br><br>
-                    <img height="400" class="imgPJ" src="ImagesGifs-GumballsFallInCup/AddedCameraLights.gif">
-                    <figcaption>
-                        Adding a camera, 2 point lights and render settings
+                        Adding metallic material, setting up camera, lights and render settings.
                     </figcaption>
                 </div>
             </div>
